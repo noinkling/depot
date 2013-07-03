@@ -1,6 +1,7 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+begin; require 'turn/autorun'; rescue LoadError; end # Better test output with colors
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
