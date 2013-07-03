@@ -2,6 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+# Allow addition of products to cart by clicking image
 $(document).on "ready page:change", ->
 	$('.store .entry > img').click ->
 		$(this).parent().find(':submit').click()
