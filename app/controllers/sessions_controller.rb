@@ -11,6 +11,10 @@ class SessionsController < ApplicationController
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to admin_url
+    # Playtime: if there are no users in database
+    elsif User.count.zero?
+      session[:user_id] = "temp"
+      redirect_to new_user_url, alert: "Please create an initial admin user"
     else
       redirect_to login_url, alert: "Invalid user/password combination"
     end

@@ -37,7 +37,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'capistrano', group: :development
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
 
 # Better test output with colors
 group :test do
