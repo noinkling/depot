@@ -28,7 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -41,5 +41,11 @@ gem 'jbuilder', '~> 1.2'
 
 # Better test output with colors
 group :test do
-    gem 'turn'
+  gem 'minitest-wscolor'
+  # gem 'minitest-spec-rails'
+  # gem 'minitest-reporters'
+  # gem 'turn'
 end
+
+# Make server log cleaner
+gem 'quiet_assets', group: :development

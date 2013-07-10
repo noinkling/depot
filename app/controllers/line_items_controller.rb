@@ -1,4 +1,5 @@
 class LineItemsController < ApplicationController
+  skip_before_action :authorize, only: :create
   include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
@@ -61,7 +62,7 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to @line_item.cart, notice: 'Item removed from cart.' } # Playtime
+      format.html { redirect_to store_url, notice: 'Item removed from cart.' } # Playtime
       format.json { head :no_content }
     end
   end

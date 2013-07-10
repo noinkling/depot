@@ -1,0 +1,17 @@
+assets
+coffee:assets
+controller
+generator
+helper
+integration_test
+jbuilder
+jquery:install
+js:assets
+mailer
+migration
+model
+resource
+scaffold
+scaffold_controller
+task
+test_unit:plugin
