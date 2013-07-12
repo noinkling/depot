@@ -51,5 +51,3 @@ group :test do
   # gem 'minitest-reporters'
   # gem 'turn'
 end
-
-# Comments for testing
