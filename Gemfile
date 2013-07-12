@@ -36,8 +36,13 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Deploy with Capistrano
 # gem 'capistrano', group: :development
 
-# To use debugger
-gem 'debugger'
+
+group :development do
+  # To use debugger
+  gem 'debugger'
+  # Make server log cleaner
+  gem 'quiet_assets'
+end
 
 # Better test output with colors
 group :test do
@@ -47,5 +52,3 @@ group :test do
   # gem 'turn'
 end
 
-# Make server log cleaner
-gem 'quiet_assets', group: :development
